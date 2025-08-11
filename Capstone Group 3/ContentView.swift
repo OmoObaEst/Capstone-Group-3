@@ -17,6 +17,7 @@ struct ContentView: View {
             Text("Change 1")
             Text("Change 2 this is super cool xdxdxd")
             Image(systemName: "sun.max")
+            Text("New Change - jovie :3")
                 
         }
         .padding()
