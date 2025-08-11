@@ -13,6 +13,10 @@ struct Capstone_Group_3App: App {
         WindowGroup {
             ContentView()
             Text("change 3")
+            VStack {
+                Spacer ()
+                Text("Change 4")
+            }
         }
     }
 }
