@@ -16,6 +16,7 @@ struct ContentView: View {
             Text("Hello, world!")
             Text("Change 1")
             Text("Change 2 this is super cool xdxdxd")
+            Text("New chnage - Esther")
             Image(systemName: "sun.max")
                 
         }
