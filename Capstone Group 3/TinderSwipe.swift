@@ -7,7 +7,9 @@
 
 import SwiftUI
 
+
 struct TinderSwipe: View {
+    private var organizations: [String] = []
     var body: some View {
         ZStack {
             Color(.systemPurple)
