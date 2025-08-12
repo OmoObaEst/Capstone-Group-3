@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            Color(.systemPurple)
+            Color(.purple)
+            
                 .ignoresSafeArea()
             VStack(alignment: .leading, spacing: 20.0) {
                 
@@ -25,6 +26,7 @@ struct ContentView: View {
                 Image("vol")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .foregroundColor(Color.white)
                     .cornerRadius(15)
                 
                 Text("what is your role?")
@@ -47,17 +49,18 @@ struct ContentView: View {
                     .tint(.blue)
                 }
             }
-                
         }
+        
+        
         .padding()
-        .background(Rectangle()
-            .foregroundColor(.white)
-            .cornerRadius(15)
-            .shadow(radius: 15)
+        .background(Rectangle())
+        .foregroundColor(Color(red: 0.988, green: 0.947, blue: 0.914))
+            .cornerRadius(22)
+            .shadow(radius: 41)
             .padding()
     }
 }
 
-#Preview {
+#Preview  {
     ContentView()
 }
