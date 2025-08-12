@@ -10,15 +10,30 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Text("Change 1")
-            Text("Change 2 this is super cool xdxdxd")
-            Image(systemName: "sun.max")
-            Text("New Change - jovie :3")
-            Text("just testing this out 1")
+//<<<<<<< HEAD
+            Text("what is your role?")
+                .font(.system(size:20))
+                .fontWeight(.black)
+                .foregroundColor(Color.red)
+                .multilineTextAlignment(.center)
+                .lineLimit(0)
+            HStack {
+            Button("Volunteer"){
+               
+            }
+            .font(.title2)
+            .buttonStyle(.borderedProminent)
+            .tint(.purple)
+                Button("Organization"){
+                }
+                .font(.title2)
+                .buttonStyle(.borderedProminent)
+                .tint(.blue)
+            }
+//=======
+           
+//>>>>>>> main
+                
         }
         .padding()
     }
