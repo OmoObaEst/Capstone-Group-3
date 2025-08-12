@@ -24,10 +24,6 @@ struct UserProfile: View {
             
             
             
-            
-            
-            
-            
             Text("Username")
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -53,7 +49,7 @@ struct UserProfile: View {
         .padding () //makes it look less akward on the sides
         .sheet(isPresented: $isPickerShowing, onDismiss: nil) {
             //image picker)
-            
+            ImagePicker ()
         } //end of image picker)
     }//end of some View
 }//end of UserProfile: View
