@@ -9,7 +9,20 @@ import SwiftUI
 
 struct OrganizationForum: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Salvation Army")
+            Link("Website", destination: URL(string: "http://www.salvationarmyusa.org/")!)
+            Text("Locations")
+            Image("salvationarmymap")
+                .resizable(resizingMode: .stretch)
+                .frame(width: 300.0, height: 250.0)
+            Text("Calender")
+            Image("calender")
+                .resizable(resizingMode: .stretch)
+                .frame(width: 300.0, height: 250.0)
+            
+            Text("PSA")
+        }
     }
 }
 
