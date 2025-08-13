@@ -20,6 +20,7 @@ struct UserProfile: View {
         ZStack{
                 Color(.black)
                     .ignoresSafeArea()
+            VStack {
                 HStack (spacing: 25){
                     
                     Text("Username")
@@ -39,35 +40,32 @@ struct UserProfile: View {
                 }//end of Hstack
                 
                 // the top of the screen with the username and skills
-                Spacer().frame(height: 175)
-                    .safeAreaInset(edge: .bottom) {
-                        VStack (spacing: 30){
-                            HStack {
-                                Text("Organizations")
-                                    .font(.title)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(Color.white)
-                                Spacer ()
-                                Text("Hours")
-                                    .font(.title)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(Color.white)
-                            }//end of HStack
-                            Text("Total Hours")
-                                .font(.title)
-                                .fontWeight(.semibold)
-                                .foregroundColor(Color.white)
-                        }//end of the VStack
-                    }//end of Safe Area
+                
+                .offset(y: -200)
+                
+                HStack {
+                    Text("Organizations")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.white)
+                    Spacer ()
+                    Text("Hours")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.white)
+                }//end of the HStack
+                
+                
+                
                 //the bottom of the screen with the hours and the organizations
-            
-            
-                    /*.sheet(isPresented: $isPickerShowing, onDismiss: nil) {
-                        //image picker)
-                        ImagePicker ()
-                    } //end of image picker)*/
-            
-            
+                
+                
+                /*.sheet(isPresented: $isPickerShowing, onDismiss: nil) {
+                 //image picker)
+                 ImagePicker ()
+                 } //end of image picker)*/
+                
+            }//end of vstack
         }//end of ZStack
     }//end of some View
 }//end of UserProfile: View
@@ -75,4 +73,5 @@ struct UserProfile: View {
 #Preview {
     UserProfile()
 }
+
 
