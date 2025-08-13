@@ -9,7 +9,6 @@ import SwiftUI
 
 
 struct TinderSwipe: View {
-    private var organizations: [String] = []
     var body: some View {
         ZStack {
             Color(.systemPurple)
@@ -40,6 +39,27 @@ struct TinderSwipe: View {
                 Text("Times: ")
                 Text("Ages: ")
                 Text("Skills Needed: ")
+                
+                Text("Would you be interested in joining [insert organization name]?")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                
+                HStack {
+                    Button("Yes!") {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    }
+                    .font(.title2)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.green)
+                    
+                    Button("No!") {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    }
+                    .font(.title2)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.red)
+                    
+                }
 
             } // end of VStack
             
