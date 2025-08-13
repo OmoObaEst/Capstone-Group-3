@@ -11,46 +11,64 @@ struct UserProfile: View {
     var body: some View {
         
         @State var isPickerShowing = false
-        
-        VStack (spacing: 25){
-            Button {
-                //show the image pciker
-                isPickerShowing = true
+        //when the user makes their account they will put the username they want. This will then pop up on this view
+        /*var userName: String = "Username"
+                var hours: Int = 0
+                var skills: String = "Skills"
+        */
+       
+        ZStack{
+                Color(.black)
+                    .ignoresSafeArea()
+                HStack (spacing: 25){
+                    
+                    Text("Username")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                    
+                    Button {
+                        //show the image picker
+                        isPickerShowing = true
+                        
+                    } label: {
+                        Text("Change Photo")
+                    }//end of button
+                    
+                    .padding ()
+                }//end of Hstack
                 
-            } label: {
-                Text("Change Photo")
-            }//end of button
+                // the top of the screen with the username and skills
+                Spacer().frame(height: 175)
+                    .safeAreaInset(edge: .bottom) {
+                        VStack (spacing: 30){
+                            HStack {
+                                Text("Organizations")
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.white)
+                                Spacer ()
+                                Text("Hours")
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.white)
+                            }//end of HStack
+                            Text("Total Hours")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color.white)
+                        }//end of the VStack
+                    }//end of Safe Area
+                //the bottom of the screen with the hours and the organizations
             
             
+                    /*.sheet(isPresented: $isPickerShowing, onDismiss: nil) {
+                        //image picker)
+                        ImagePicker ()
+                    } //end of image picker)*/
             
             
-            Text("Username")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            HStack {
-                Text ("#Skills")
-                    .font(.headline)
-            }//end of HStack
-        }//end of Vstack
-        // the top of the screen with the username and skills
-        Spacer().frame(height: 175)
-    
-        VStack (spacing: 100){
-            Text("Hours")
-                .font(.title)
-                .fontWeight(.semibold)
-            Text("Organizations")
-                .font(.title)
-                .fontWeight(.semibold)
-
-            }//end of VStack
-        //the bottom of the screen with the hours and the organizations
-        .frame(maxWidth: .infinity, alignment: .leading) // pushes the text "hours" and "orgs" to the side
-        .padding () //makes it look less akward on the sides
-        .sheet(isPresented: $isPickerShowing, onDismiss: nil) {
-            //image picker)
-            ImagePicker ()
-        } //end of image picker)
+        }//end of ZStack
     }//end of some View
 }//end of UserProfile: View
 
