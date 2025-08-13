@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OrganizationProfile: View {
     var body: some View {
+        ScrollView {
             ZStack{
                 Color.voluntRBeige
                     .edgesIgnoringSafeArea(.all)
@@ -28,6 +29,9 @@ struct OrganizationProfile: View {
                                 .fontWeight(.bold)
                                 .foregroundStyle(Color(.white))
                             
+                            Link("salvationarmyusa.org", destination: URL(string: "http://www.salvationarmyusa.org/")!)
+                                .foregroundStyle(Color(.blue))
+                                .underline()
                             
                             Button("Forum") {
                                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
@@ -35,7 +39,7 @@ struct OrganizationProfile: View {
                             .font(.headline)
                             .buttonStyle(.borderedProminent)
                             .tint(Color(.voluntRDarkGreen))
-                
+                            
                         }
                         Image("salvationarmylogo")
                             .resizable(resizingMode: .stretch)
@@ -45,16 +49,10 @@ struct OrganizationProfile: View {
                     }
                     .padding(.horizontal, 15.0)
                     .background(Rectangle() .foregroundColor(.voluntRLightGreen))
-                        .cornerRadius(10)
-                        .shadow(radius: 5)
+                    .cornerRadius(10)
+                    .shadow(radius: 5)
                     
                     //----------------------------------------///
-                    
-                    Text("The Salvation Army is an international Christian charitable organization with a mission to preach the gospel of Jesus Christ and meet human needs in His name without discrimination.")
-                        .fontWeight(.semibold)
-                        .padding(.horizontal, 30)
-                        .padding(.vertical, 10)
-                        .foregroundStyle(Color(.voluntRDarkBurgundy))
                     
                     Image("salvationarmy")
                         .resizable(resizingMode: .stretch)
@@ -63,11 +61,45 @@ struct OrganizationProfile: View {
                         .cornerRadius(15)
                         .padding()
                     
-                    Spacer()
-                }
-            }
-        }
+                    Text("The Salvation Army is an international Christian charitable organization with a mission to preach the gospel of Jesus Christ and meet human needs in His name without discrimination.")
+                        .fontWeight(.semibold)
+                        .padding(.horizontal, 30)
+                        .foregroundStyle(Color(.voluntRDarkBurgundy))
+                
+                    Text("Locations")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundStyle(Color(.voluntRDarkBurgundy))
+                            .padding()
+                        
+                        Image("salvationarmymap")
+                            .resizable(resizingMode: .stretch)
+                            .frame(width: 350.0, height: 300.0)
+                            .border(Color.voluntRDarkBlue, width: 5)
+                            .cornerRadius(15)
+                    
+                    //--------------------------------------//
+                    
+                    Text("Calender")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color(.voluntRDarkBurgundy))
+                        .padding()
+                    Image("calender")
+                        .resizable(resizingMode: .stretch)
+                        .frame(width: 350.0, height: 300.0)
+                        .border(Color.voluntRDarkBlue, width: 5)
+                        .cornerRadius(15)
+                    
+                    
+                    Text("PSA")
+                    
+                }//end of v stack
+            }//end of z stack
+        } .background(Color.voluntRBeige)
+        //end of scrollview
     }
+}
 
 #Preview {
     OrganizationProfile()
