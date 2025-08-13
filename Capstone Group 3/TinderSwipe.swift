@@ -39,7 +39,7 @@ class CardViewModel: ObservableObject {
 struct TinderSwipe: View {
     var body: some View {
         ZStack {
-            Color(.systemPurple)
+            Color(.voluntRBeige)
                 .ignoresSafeArea() // color of the background
             
             VStack(alignment: .leading, spacing:20) {
