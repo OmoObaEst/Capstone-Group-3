@@ -6,15 +6,15 @@ struct ContentView: View {
             ZStack {
                 Color(.voluntRBeige)
                     .ignoresSafeArea()
-
+                
                 VStack(spacing: 10.0) {
-
+                    
                     Text("VoluntR")
                         .font(.system(size: 80))
                         .fontWeight(.heavy)
                         .foregroundColor(Color(red: 0.537, green: 0.251, blue: 0.351))
                         .multilineTextAlignment(.center)
-
+                    
                     Image("vol")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -26,16 +26,17 @@ struct ContentView: View {
                         .cornerRadius(15)
                         .shadow(radius: 15)
                         .padding()
-
+                    
                     Text("what is your role?")
                         .font(.system(size:20))
                         .fontWeight(.black)
                         .foregroundColor(Color("voluntRDarkBlue"))
                         .multilineTextAlignment(.center)
                         .lineLimit(0)
-
+                    
                     HStack {
                         // Volunteer Button
+                        Spacer().frame(width: 10.0)
                         NavigationLink(destination: VolunteerLoginView()) {
                             Text("Volunteer")
                                 .font(.title2)
@@ -43,24 +44,28 @@ struct ContentView: View {
                         }
                         .buttonStyle(.borderedProminent)
                         .tint(Color("voluntRBlack"))
-
-                        Spacer().frame(width: 35.0)
-
+                        
+                        Spacer().frame(width: 10.0)
+                        
                         // Organization Button
-                        Button("Organization") {
-                            // Future logic for org login
+                        NavigationLink(destination: OrganizationLoginView()) {
+                            Text("Organization")
+                                .font(.title2)
+                                .frame(minWidth: 0, maxWidth: .infinity)
                         }
-                        .font(.title2)
                         .buttonStyle(.borderedProminent)
                         .tint(Color("voluntRBlack"))
+                        
+                        
+                        .padding(.horizontal)
                     }
-                    .padding(.horizontal)
                 }
             }
         }
     }
 }
+    
+    #Preview {
+        ContentView()
+    }
 
-#Preview {
-    ContentView()
-}
