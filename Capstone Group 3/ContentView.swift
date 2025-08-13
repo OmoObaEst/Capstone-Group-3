@@ -13,6 +13,7 @@ struct ContentView: View {
             Color(.voluntRBeige)
                 .ignoresSafeArea()
             
+                .ignoresSafeArea()
             VStack(alignment: .leading, spacing: 20.0) {
                 
                 Text("VoluntR")
