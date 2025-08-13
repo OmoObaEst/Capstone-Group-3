@@ -13,22 +13,27 @@ struct ContentView: View {
             Color(.voluntRBeige)
                 .ignoresSafeArea()
             
-                .ignoresSafeArea()
-            VStack(alignment: .leading, spacing: 20.0) {
+            VStack(spacing: 10.0) {
                 
                 Text("VoluntR")
-                    .font(.largeTitle)
+                    .font(.system(size: 80))
                     .fontWeight(.heavy)
-                    .foregroundColor(Color(red: 0.538, green: 0.251, blue: 0.351))
-                    .multilineTextAlignment(.trailing)
-                    .lineLimit(5)
-                    .padding(100.0)
+                    .foregroundColor(Color(red: 0.537, green: 0.251, blue: 0.351))
+                    .multilineTextAlignment(.center)
+                    
+                    
                 
                 Image("vol")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(Color.white)
-                    .cornerRadius(15)
+                    .cornerRadius(3)
+                    .padding()
+                            .background(Rectangle()
+                                .foregroundColor(.white))
+                                    .cornerRadius(15)
+                                    .shadow(radius: 15)
+                            .padding()
                 
                 Text("what is your role?")
                     .font(.system(size:20))
@@ -42,12 +47,14 @@ struct ContentView: View {
                     }
                     .font(.title2)
                     .buttonStyle(.borderedProminent)
-                    .tint(.purple)
+                    .tint(Color("voluntRBlack"))
+                    Spacer()
+                        .frame(width: 35.0)
                     Button("Organization"){
                     }
                     .font(.title2)
                     .buttonStyle(.borderedProminent)
-                    .tint(.blue)
+                    .tint(Color("voluntRBlack"))
                 }
             }
         }
