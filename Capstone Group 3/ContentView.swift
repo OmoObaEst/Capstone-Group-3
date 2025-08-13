@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            Color(.purple)
+            Color(.voluntRBeige)
+                .ignoresSafeArea()
             
                 .ignoresSafeArea()
             VStack(alignment: .leading, spacing: 20.0) {
@@ -19,9 +20,9 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                     .foregroundColor(Color(red: 0.538, green: 0.251, blue: 0.351))
-                    .multilineTextAlignment(.leading)
-                    .lineLimit(2)
-                    .padding(11.0)
+                    .multilineTextAlignment(.trailing)
+                    .lineLimit(5)
+                    .padding(100.0)
                 
                 Image("vol")
                     .resizable()
@@ -52,12 +53,7 @@ struct ContentView: View {
         }
         
         
-        .padding()
-        .background(Rectangle())
-        .foregroundColor(Color(red: 0.988, green: 0.947, blue: 0.914))
-            .cornerRadius(22)
-            .shadow(radius: 41)
-            .padding()
+       
     }
 }
 
