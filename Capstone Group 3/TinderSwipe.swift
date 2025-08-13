@@ -7,6 +7,34 @@
 
 import SwiftUI
 
+// Establishing the plug for the companies :3
+struct Company: Identifiable {
+    let id = UUID()
+    let name: String
+    let description: String
+    let imageName: String
+    let location: String // might change cuz the regions may vary
+    let skillsNeeded: String // most likely doing this in a tag format >:D
+    let ages: Int
+}
+
+
+class CardViewModel: ObservableObject {
+    @Published var companies: [Company]
+    @Published var currentIndex = 0
+    init(companies: [Company]) {
+        self.companies = companies
+    }
+    
+    func nextCard() {
+        if currentIndex < companies.count - 1 {
+            currentIndex += 1
+        } else {
+            currentIndex = 0 // Loop back to first
+        }
+    }
+}
+
 
 struct TinderSwipe: View {
     var body: some View {
@@ -60,7 +88,6 @@ struct TinderSwipe: View {
                     .tint(.red)
                     
                 }
-
             } // end of VStack
             
             .padding()
