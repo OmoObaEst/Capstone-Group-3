@@ -9,10 +9,70 @@ import SwiftUI
 
 struct UserProfile: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        
+        @State var isPickerShowing = false
+        //when the user makes their account they will put the username they want. This will then pop up on this view
+        /*var userName: String = "Username"
+                var hours: Int = 0
+                var skills: String = "Skills"
+        */
+       
+        ZStack{
+                Color(.black)
+                    .ignoresSafeArea()
+                HStack (spacing: 25){
+                    
+                    Text("Username")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                    
+                    Button {
+                        //show the image picker
+                        isPickerShowing = true
+                        
+                    } label: {
+                        Text("Change Photo")
+                    }//end of button
+                    
+                    .padding ()
+                }//end of Hstack
+                
+                // the top of the screen with the username and skills
+                Spacer().frame(height: 175)
+                    .safeAreaInset(edge: .bottom) {
+                        VStack (spacing: 30){
+                            HStack {
+                                Text("Organizations")
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.white)
+                                Spacer ()
+                                Text("Hours")
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.white)
+                            }//end of HStack
+                            Text("Total Hours")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color.white)
+                        }//end of the VStack
+                    }//end of Safe Area
+                //the bottom of the screen with the hours and the organizations
+            
+            
+                    /*.sheet(isPresented: $isPickerShowing, onDismiss: nil) {
+                        //image picker)
+                        ImagePicker ()
+                    } //end of image picker)*/
+            
+            
+        }//end of ZStack
+    }//end of some View
+}//end of UserProfile: View
 
 #Preview {
     UserProfile()
 }
+
