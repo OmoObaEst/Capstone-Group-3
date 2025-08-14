@@ -6,13 +6,8 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		BD3D7EAF2E4D15E400C8D242 /* OrganizationLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3D7EAE2E4D15E400C8D242 /* OrganizationLoginView.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		BD386BDA2E4A2BBF00DF92AA /* Capstone Group 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Capstone Group 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD3D7EAE2E4D15E400C8D242 /* OrganizationLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -37,7 +32,6 @@
 		BD386BD12E4A2BBF00DF92AA = {
 			isa = PBXGroup;
 			children = (
-				BD3D7EAE2E4D15E400C8D242 /* OrganizationLoginView.swift */,
 				BD386BDC2E4A2BBF00DF92AA /* Capstone Group 3 */,
 				BD386BDB2E4A2BBF00DF92AA /* Products */,
 			);
@@ -125,7 +119,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD3D7EAF2E4D15E400C8D242 /* OrganizationLoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
