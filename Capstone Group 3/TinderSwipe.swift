@@ -47,7 +47,7 @@ struct TinderSwipe: View {
                     Text("Location: Varies")
                     Text("Times: 9AM - 5PM")
                     Text("Ages: 18+")
-                    Text("Skills Needed: ")
+                    Text("Skills Needed: DMing for more info")
                     
                     Text("Would you be interested in joining Salvation Army?")
                         .font(.title3)
