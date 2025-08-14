@@ -36,19 +36,19 @@ struct TinderSwipeNo: View {
 
                         Spacer()
 
-                        Text("Thrift Store & Faith Organization")
+                        Text("Marine Life Restoration")
 
                     } // end of HStack
 
                     
-                    Text("Billion Oyster Project is restoring oyster reefs to New York Harbor in collaboration with New York City communities. Oyster reefs provide habitat for hundreds of species, and can protect our city from storm damage — softening the blow of large waves, reducing flooding, and preventing erosion along the shorelines. Field stations are restoration sites where  Billion Oyster Project, or our partner organizations, host regular field days utilizing an oyster installation. They are targeted for long-term community and student engagement with an emphasis on local involvement.")
+                    Text("Billion Oyster Project is restoring oyster reefs to New York Harbor in collaboration with New York City communities.")
                     
                     Text("Location: Brooklyn, NY")
                     Text("Times: 7AM - 3PM")
                     Text("Ages: 16+")
                     Text("Skills Needed: DMing for more info")
                     
-                    Text("Would you be interested in joining Salvation Army?")
+                    Text("Would you be interested in joining the Billion Oyster Project?")
                         .font(.title3)
                         .fontWeight(.semibold)
                     
