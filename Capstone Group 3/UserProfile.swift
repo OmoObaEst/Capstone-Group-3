@@ -45,13 +45,12 @@ struct UserProfile: View {
                     Color(.voluntRBeige)
                         .ignoresSafeArea()
                     VStack {
-                        HStack (spacing: 25){
-                            
+                        HStack (spacing: 25) {
                             Text("Username")
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
-                                .foregroundColor(Color(red: 0.537, green: 0.251, blue: 0.351))
-                                .multilineTextAlignment(.center)
+                                .foregroundColor(Color(.white))
+
                             
                             Button {
                                 //show the image picker
@@ -60,7 +59,14 @@ struct UserProfile: View {
                             } label: {
                                 Text("Change Photo")
                             }//end of button
+                            .font(.headline)
+                            .buttonStyle(.borderedProminent)
+                            .tint(Color(.voluntRDarkBlue))
                         }//end of Hstack
+                        .padding(20)
+                        .background(Rectangle() .foregroundColor(.voluntRLightBlue))
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
   
                         
                         HStack {
@@ -100,12 +106,10 @@ struct UserProfile: View {
                             }.offset(x:0, y:-70)
                         }
                         .offset(x:0, y:30)
-           
-                       
-                        /*.sheet(isPresented: $isPickerShowing, onDismiss: nil) {
+                        .sheet(isPresented: $isPickerShowing, onDismiss: nil) {
                          //image picker)
                          ImagePicker ()
-                         } //end of image picker)*/
+                         } 
                         
                     }.offset(x:0, y:30)
                 }//end of ZStack

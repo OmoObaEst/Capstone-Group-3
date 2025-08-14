@@ -13,16 +13,16 @@ struct OrganizationProfileForOrgs: View {
             VStack {} // end of vstack
                 .toolbar {
                     ToolbarItemGroup(placement: .status) {
-                        NavigationLink(destination: TinderSwipe()) {
-                            Text("V")
+                        NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/ ) {
+                            Text("PSA")
                                 .fontWeight(.heavy)
                                 .foregroundStyle(Color.white)
-                                .padding(20.0)
+                                .padding(15.0)
                                 .background(Circle() .foregroundColor(.voluntRDarkBurgundy))
                                 .padding(.top, 30)
                                 
                         }
-                        NavigationLink(destination: UserProfile()) {
+                        NavigationLink(destination: OrganizationProfileForOrgs()) {
                             Image("profileicon")
                                 .resizable(resizingMode: .stretch)
                                 .frame(width: 55.0, height: 55.0)
@@ -30,6 +30,7 @@ struct OrganizationProfileForOrgs: View {
                         }
                     }
                 }
+
             ScrollView {
                 ZStack{
                     Color.voluntRBeige

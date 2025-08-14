@@ -46,7 +46,7 @@ struct OrganizationLoginView: View {
                     .padding(.horizontal)
 
                     // NavigationLink triggered programmatically
-                    NavigationLink(destination: OrganizationProfile(), isActive: $isLoggedIn) {
+                    NavigationLink(destination: OrganizationProfileForOrgs(), isActive: $isLoggedIn) {
                         EmptyView()
                     }
                 }
