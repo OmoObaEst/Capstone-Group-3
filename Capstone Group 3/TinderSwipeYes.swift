@@ -41,7 +41,7 @@ struct TinderSwipeYes: View {
                     } // end of HStack
 
                     
-                    Text("Idealist is an interactive site where people and organizations can exchange resources and ideas, locate opportunities and supporters, and take steps toward building a world where all people can lead free and dignified lives.")
+                    Text("Idealist is an interactive site where people and organizations can exchange resources and ideas and take steps toward building a world where all people can lead free and dignified lives.")
                     
                     Text("Location: Varies")
                     Text("Times: Varies")
