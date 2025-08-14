@@ -39,8 +39,7 @@ struct UserProfile: View {
                 }
             
             
-            
-            
+    
             ScrollView{
                 ZStack{
                     Color(.voluntRBeige)
@@ -61,68 +60,54 @@ struct UserProfile: View {
                             } label: {
                                 Text("Change Photo")
                             }//end of button
-                            
-                            .padding ()
                         }//end of Hstack
-                        
-                        // the top of the screen with the username and skills
-                        
-                        // .offset(y: -200)
+  
                         
                         HStack {
-                            Text("Organizations")
-                                .font(.title)
-                                .fontWeight(.semibold)
-                                .foregroundColor(Color(red: 0.537, green: 0.251, blue: 0.351))
-                                .multilineTextAlignment(.center)
-                            Spacer ()
+                            VStack {
+                                Text("Organizations")
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color(red: 0.537, green: 0.251, blue: 0.351))
+                                
+                                Text("Salvation Army ")
+                                    .font(.headline)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color(red: 0.537, green: 0.251, blue: 0.351))
+                       
+                                    Image("vol")
+                                        .resizable(resizingMode: .stretch)
+                                        .foregroundColor(Color.white)
+                                        .cornerRadius(3)
+                                        .padding()
+                                        .background(Rectangle()
+                                            .foregroundColor(.white))
+                                        .cornerRadius(15)
+                                        .frame(width: 200.0, height: 125.0)
+                                        .shadow(radius: 15)
+                            }.offset(x:-30, y:0)
+
                             VStack {
                                 Text("Hours")
                                     .font(.title)
                                     .fontWeight(.semibold)
                                     .foregroundColor(Color(red: 0.537, green: 0.251, blue: 0.351))
-                                    .multilineTextAlignment(.center)
-                                Spacer ()
+                               
+ 
                                 Text("5 Hours")
                                     .foregroundColor(Color(red: 0.537, green: 0.251, blue: 0.351))
-                                    .multilineTextAlignment(.center)
-                            }
-                        }//end of the HStack
-                        VStack(alignment: .leading) {
-                            Text("Salvation Army ")
-                                .font(.headline)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color(red: 0.537, green: 0.251, blue: 0.351))
-                                .multilineTextAlignment(.center)
-                            HStack {
-                                Image("vol")
-                                    .resizable(resizingMode: .stretch)
-                                    .foregroundColor(Color.white)
-                                    .cornerRadius(3)
-                                    .padding()
-                                    .background(Rectangle()
-                                        .foregroundColor(.white))
-                                    .cornerRadius(15)
-                                    .frame(width: 200.0, height: 125.0)
-                                    .shadow(radius: 15)
-                                    .padding()
-                                Spacer()
-                            }
-                            
-                            .padding ()
-                        } //end of VStack
-                        //                    .frame(width: 250.0, height: 400.0)
-                        
-                        
-                        //the bottom of the screen with the hours and the organizations
-                        
-                        
+                
+                            }.offset(x:0, y:-70)
+                        }
+                        .offset(x:0, y:30)
+           
+                       
                         /*.sheet(isPresented: $isPickerShowing, onDismiss: nil) {
                          //image picker)
                          ImagePicker ()
                          } //end of image picker)*/
                         
-                    }//end of vstack
+                    }.offset(x:0, y:30)
                 }//end of ZStack
             }.background(Color.voluntRBeige)//end of scroll view
         }//end of nav stack
