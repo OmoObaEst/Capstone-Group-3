@@ -23,11 +23,12 @@ struct ContentView: View {
                         .padding()
                     
                     Text("what is your role?")
-                        .font(.system(size:20))
+                        .font(.system(size:30))
                         .fontWeight(.black)
                         .foregroundColor(Color("voluntRDarkBlue"))
                         .multilineTextAlignment(.center)
                         .lineLimit(0)
+                        .padding(5.0)
                     
                     HStack {
                         // Volunteer Button
