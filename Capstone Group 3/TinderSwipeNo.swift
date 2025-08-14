@@ -26,9 +26,7 @@ struct TinderSwipeNo: View {
                 VStack(alignment: .leading, spacing:20) {
                     Image("billion")
                         .resizable()
-                        .aspectRatio(contentMode: .stretch)
-
-                        .frame(width: 400.0, height: 400.0)
+                        .aspectRatio(contentMode: .fit)
                         .cornerRadius(15)
     // Text for TinderSwipeNo
                     HStack(spacing:20) {
