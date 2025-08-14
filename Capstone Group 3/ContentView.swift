@@ -9,21 +9,16 @@ struct ContentView: View {
                 
                 VStack(spacing: 10.0) {
                     
-                    Text("VoluntR")
-                        .font(.system(size: 80))
-                        .fontWeight(.heavy)
-                        .foregroundColor(Color(red: 0.537, green: 0.251, blue: 0.351))
-                        .multilineTextAlignment(.center)
+                   
                     
-                    Image("vol")
+                    Image("voluntrlogo")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(3)
-                        .padding()
-                        .background(Rectangle()
-                            .foregroundColor(.white))
-                        .cornerRadius(15)
+                        .clipShape(Circle()) // makes it circular
+                        .overlay(
+                            Circle()
+                                .stroke(Color.white, lineWidth: 4) // optional border
+                        )
                         .shadow(radius: 15)
                         .padding()
                     
