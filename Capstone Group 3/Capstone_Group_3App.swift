@@ -12,11 +12,6 @@ struct Capstone_Group_3App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-            Text("change 3")
-            VStack {
-                Spacer ()
-                Text("Change 4")
-            }
         }
     }
 }
